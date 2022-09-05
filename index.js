@@ -13,7 +13,7 @@ sequelize.sync().then( () => console.log("[+] Database Connection is OK") );
 // 2.Sever start
 const app = express();
 
-// db4. Serialize Json => Postmanda request atarken Post Request > Body > raw > Json > {include insert json}
+// db4. Serialize Json => Postman send request Post Request > Body > raw > Json > {include insert json}
 app.use(express.json());
 
 // 4.GET request
@@ -32,14 +32,10 @@ app.listen(8000, () => {
 });
 
 /*
+Always autostart nodejs server
 
-
-Serveri Hemise Save etdikden sonra yenide baslatmaq lazimdir
-normalda
-
+Before:
 >>> node index.js
-
-Amma ozu daime reload atmasi ucun
 
 1.Install packege for auto start
 
@@ -55,13 +51,10 @@ Amma ozu daime reload atmasi ucun
 
 3. Run Server
 >>> yarn start
-
-
 */
 
 
 /*
-
 Sqlite3 connection
 
 1. Yarn install
@@ -71,5 +64,4 @@ Sqlite3 connection
 
 2. Check package.json file 
 3. Create database.js
-
 */
